@@ -1,4 +1,5 @@
 // create ATM System.
+import 'dart:async';
 import 'dart:io';
 
 void main() {
@@ -15,7 +16,8 @@ void main() {
         print("1: CHECK BALANCE");
         print("2: WITHDRAW");
         print("3: DEPOSIT");
-        print("4: EXIT");
+        print("4: MONEY TRANSFER");
+        print("5: EXIT");
         int input = int.parse(stdin.readLineSync()!);
         if (input == 1) {
           print("YOUR BALANCE IS: $balance");
@@ -34,6 +36,15 @@ void main() {
           balance = balance + deposit;
           print("YOUR BALANCE IS: $balance");
         } else if (input == 4) {
+          print("SELECT YOUR BANK");
+          print("1: ABC BANK");
+          print("2: XYZ BANK");
+          print("3; ABC ISLAMIC BANK");
+          print("4: XYZ ISLAMIC BANK");
+          if (input==1) {
+            
+          }
+        } else if (input == 5) {
           print("---THANK YOU FOR USING ATM😊😊---");
           password = false;
         }
