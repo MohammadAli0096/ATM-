@@ -35,14 +35,53 @@ void main() {
           int deposit = int.parse(stdin.readLineSync()!);
           balance = balance + deposit;
           print("YOUR BALANCE IS: $balance");
-        } else if (input == 4) {
+        }
+        // } else if (input == 4) {
+        //   print("SELECT YOUR BANK");
+        //   print("1: ABC BANK");
+        //   print("2: XYZ BANK");
+        //   print("3; ABC ISLAMIC BANK");
+        //   print("4: XYZ ISLAMIC BANK");
+        //   if (input==1) {
+        //   }
+        else if (input == 4) {
+          // ===== YEH COMPLETE KIYA GAYA PART HAI =====
           print("SELECT YOUR BANK");
           print("1: ABC BANK");
           print("2: XYZ BANK");
-          print("3; ABC ISLAMIC BANK");
+          print("3: ABC ISLAMIC BANK");
           print("4: XYZ ISLAMIC BANK");
-          if (input==1) {
-            
+
+          int bankChoice = int.parse(
+            stdin.readLineSync()!,
+          ); // user se bank ka number lo
+
+          String bankName = ""; // bank ka naam yahan store hoga
+
+          if (bankChoice == 1) {
+            bankName = "ABC BANK";
+          } else if (bankChoice == 2) {
+            bankName = "XYZ BANK";
+          } else if (bankChoice == 3) {
+            bankName = "ABC ISLAMIC BANK";
+          } else if (bankChoice == 4) {
+            bankName = "XYZ ISLAMIC BANK";
+          } else {
+            print("INVALID BANK SELECTION!");
+          }
+
+          // sirf tab age badho jab bank sahi select hui ho
+          if (bankName != "") {
+            print("---ENTER TRANSFER AMOUNT---");
+            int transferAmount = int.parse(stdin.readLineSync()!);
+
+            if (transferAmount <= balance) {
+              balance = balance - transferAmount;
+              print("$transferAmount TRANSFERRED TO $bankName SUCCESSFULLY!");
+              print("YOUR BALANCE IS: $balance");
+            } else {
+              print("LOW BALANCE! TRANSFER FAILED.");
+            }
           }
         } else if (input == 5) {
           print("---THANK YOU FOR USING ATM😊😊---");
