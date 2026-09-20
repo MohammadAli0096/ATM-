@@ -14,6 +14,7 @@ void main() {
       print("2: WITHDRAW");
       print("3: DEPOSIT");
       print("exit");
+      print("INTER YOUR PIN");
       int input = int.parse(stdin.readLineSync()!);
       if (input == 1) {
         print("YOUR BALANCE IS: $balance");
@@ -26,16 +27,15 @@ void main() {
           print("LOW BALANCE!");
         }
       } else if (input == 3) {
+        print("DEPOSIT AMOUNT");
         int deposit = int.parse(stdin.readLineSync()!);
         balance = balance + deposit;
         print("YOUR BALANCE IS: $balance");
       }
     } else {
       print("---WRONG PIN CODE---");
-      print("PLEASE TRY AGAIM");
-
+      print("  PLEASE TRY AGAIM");
     }
   }
   password = false;
 }
-
