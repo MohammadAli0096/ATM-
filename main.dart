@@ -35,28 +35,15 @@ void main() {
           int deposit = int.parse(stdin.readLineSync()!);
           balance = balance + deposit;
           print("YOUR BALANCE IS: $balance");
-        }
-        // } else if (input == 4) {
-        //   print("SELECT YOUR BANK");
-        //   print("1: ABC BANK");
-        //   print("2: XYZ BANK");
-        //   print("3; ABC ISLAMIC BANK");
-        //   print("4: XYZ ISLAMIC BANK");
-        //   if (input==1) {
-        //   }
-        else if (input == 4) {
-          // ===== YEH COMPLETE KIYA GAYA PART HAI =====
+        } else if (input == 4) {
           print("SELECT YOUR BANK");
           print("1: ABC BANK");
           print("2: XYZ BANK");
           print("3: ABC ISLAMIC BANK");
           print("4: XYZ ISLAMIC BANK");
 
-          int bankChoice = int.parse(
-            stdin.readLineSync()!,
-          ); // user se bank ka number lo
-
-          String bankName = ""; // bank ka naam yahan store hoga
+          int bankChoice = int.parse(stdin.readLineSync()!);
+          String bankName = "";
 
           if (bankChoice == 1) {
             bankName = "ABC BANK";
@@ -70,7 +57,6 @@ void main() {
             print("INVALID BANK SELECTION!");
           }
 
-          // sirf tab age badho jab bank sahi select hui ho
           if (bankName != "") {
             print("---ENTER TRANSFER AMOUNT---");
             int transferAmount = int.parse(stdin.readLineSync()!);
